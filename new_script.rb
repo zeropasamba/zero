@@ -1,0 +1,1 @@
+print "this is for the new script test \n"
