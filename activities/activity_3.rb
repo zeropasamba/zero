@@ -3,13 +3,14 @@
 #  The function will return an array of age differences between the 1st and 2nd age, 2nd and 3rd  .. so on and so forth.
 #  Print on console the result.
 
-def array_of_ages(ages)
-  difference = 0
-  diff = 0
-  ages.each do |age|
-    diff = age
+def age_differences(ages)
+  differences = []
+  for i in 0...(ages.length - 1)
+    differences.push(ages[i+1] - ages[i])
   end
-  difference = diff - age
-  return difference
+  return differences
 end
-p array_of_ages([22,44,55,22,33,56])
+
+ages = [20, 33, 41, 59]
+differences = age_differences(ages)
+puts differences
